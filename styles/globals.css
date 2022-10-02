@@ -6,21 +6,34 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.banner1 {
+  background: url(/assets/banner.jpeg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+}
+.banner1::after {
+ content: "";
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ background-color: #494747a8;
+ opacity: 0.9;
+ z-index: -1;
 }
 
-* {
-  box-sizing: border-box;
+.banner2 {
+  background: url(/assets/banner1.jpeg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.banner_title{
+  font-family: 'Passions Conflict', cursive;
 }
